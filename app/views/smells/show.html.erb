@@ -1,0 +1,10 @@
+&laquo; <%= link_to 'back', smells_path %>
+<h1><%= @smell.title %></h1>
+<time><%= @smell.updated_at.strftime("%b %d, %Y") %></time><br>
+<%= link_to 'View on map', @smell.location_url %>
+<br>
+<%= image_tag( @smell.image_url ) %>
+
+<hr>
+<%= link_to 'Edit', edit_smell_path( @smell ) %>
+<%= link_to 'Delete', smell_path( @smell ), method: :delete %>
